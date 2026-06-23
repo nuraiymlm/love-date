@@ -621,11 +621,11 @@ body {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(10px, 2vw, 16px);
+  gap: clamp(12px, 2.2vw, 18px);
 }
 
 .date-card {
-  min-height: 340px;
+  min-height: 372px;
   cursor: pointer;
   border: none;
   border-radius: 24px;
@@ -635,10 +635,10 @@ body {
   text-align: left;
   box-shadow: var(--shadow);
   border: 1px solid rgba(224,140,164,.28);
-  padding: 12px;
+  padding: 16px 14px 14px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
 }
 
@@ -659,6 +659,7 @@ body {
   background: linear-gradient(160deg, #FBD9CE, #E7DCF5 60%, #F6E5C8);
   display: grid;
   place-items: center;
+  margin-top: 6px;
 }
 
 .date-card-photo img {
@@ -668,10 +669,20 @@ body {
   display: block;
 }
 
+.date-card-photo span {
+  padding: 14px;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.35;
+  color: rgba(74,60,53,.55);
+  font-style: italic;
+}
+
 .date-card-body {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
+  padding-top: 2px;
 }
 
 .date-card-title {
@@ -1122,6 +1133,46 @@ const CONFIG = {
       photo: 'https://res.cloudinary.com/dlr5ndlss/image/upload/v1782235437/photo_2026-06-23_22-19-14_mbbbp4.jpg',
       caption: 'киношный вайб',
       plan: 'выберем фильм, возьмём вкусняшки, а потом ещё немного погуляем.'
+    },
+    {
+      title: 'пикник можт',
+      emoji: '🧺',
+      when: 'когда будет норм погода',
+      where: 'парк / травка / пледик',
+      note: 'еда, фотки и вайб обязательны',
+      photo: '',
+      caption: 'уютный вайб',
+      plan: 'возьмём что-нибудь вкусное, сядем на пледик, будем болтать, кушать и просто кайфовать.'
+    },
+    {
+      title: 'боулинг',
+      emoji: '🎳',
+      when: 'когда захочется шума',
+      where: 'боулинг',
+      note: 'проигравший выполняет желание ахаха',
+      photo: '',
+      caption: 'соревновательный вайб',
+      plan: 'пойдём в боулинг, будем очень серьёзно играть, а потом смеяться с того, как мы оба старались.'
+    },
+    {
+      title: 'закат гулять',
+      emoji: '🌆',
+      when: 'вечером, ближе к закату',
+      where: 'где красиво',
+      note: 'держаться за ручки желательно',
+      photo: '',
+      caption: 'романтичный вайб',
+      plan: 'просто пойдём гулять под закат, сделаем кучу красивых фоток и будем такими немного киношными.'
+    },
+    {
+      title: 'картинг можт',
+      emoji: '🏎️',
+      when: 'когда захотим адреналин',
+      where: 'картинг',
+      note: 'не обижаться если я выиграю',
+      photo: '',
+      caption: 'быстрый вайб',
+      plan: 'сходим на картинг, погоняем, а потом обсудим кто был самым опасным гонщиком этого вечера.'
     }
   ]
 };
@@ -1898,7 +1949,7 @@ function initDateChoices() {
     const img = card.querySelector('img');
     img.onerror = () => {
       img.remove();
-      card.querySelector('.date-card-photo').innerHTML = `<span>${CONFIG.defaultPhotoPlaceholder}</span>`;
+      card.querySelector('.date-card-photo').innerHTML = `<span>тут потом будет фотка под этот вайб</span>`;
     };
 
     card.addEventListener('click', () => {
