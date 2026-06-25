@@ -759,7 +759,7 @@ body {
   padding: 9px 9px 11px;
   box-shadow: var(--shadow);
   transform: rotate(-2.5deg);
-  width: clamp(150px, 37vw, 190px);
+  width: clamp(170px, 42vw, 230px);
 }
 
 .polaroid::before {
@@ -776,7 +776,7 @@ body {
 
 .photo {
   width: 100%;
-  height: clamp(100px, 15vh, 140px);
+  height: clamp(125px, 18vh, 175px);
   border-radius: 6px;
   overflow: hidden;
   background: linear-gradient(160deg, #FBD9CE, #E7DCF5 60%, #F6E5C8);
@@ -1014,7 +1014,7 @@ body {
 
     <section class="date-choice">
       <h2>выбери нашу свиданку</h2>
-      <p class="date-choice-sub">каждая карточка — отдельная идея, а выбора у тя нет, мы должны всё попробовать</p>
+      <p class="date-choice-sub">каждая карточка интересная идея как по мне</p>
 
       <div class="date-grid" id="dateGrid"></div>
 
@@ -1067,15 +1067,15 @@ const CONFIG = {
   buttons: {
     hero: ' чо тамм?',
     timer: 'ага',
-    env: 'жаным'
+    env: 'жаныммм'
   },
 
   envTitle: 'несколько причин, почему ты самый близкий человек в моей жизни',
   reasons: [
-    'ты терпишь мой хаос и всё равно остаёшься рядом',
-    'с тобой даже обычный день становится каким-то тёплым',
-    'ты умеешь делать мне спокойно одним сообщением',
-    'с тобой я чаще улыбаюсь как микрочелик',
+    'ты терпишь мой хаос и все равно остаёшься рядом со мной',
+    'с тобой обычный день становится особенным и теплым',
+    'ты умеешь делать мне приятно одним лишь сообщением',
+    'с тобой я чаще улыбаюсь и чувствую себя комфортно чем с кем-либо',
     'ты мой самый любимый человек для моих приключений в жизни'
   ],
 
@@ -1084,8 +1084,8 @@ const CONFIG = {
   noTexts: ['не', 'точно нет?', 'подумай ещё', 'ну жан', 'ща расстроюсь'],
   noGoneText: 'кнопка устала убегать',
 
-  defaultPhotoPlaceholder: 'тут будет наша фотка после дейт',
-  polaroidCaption: 'тут будет наша фотка после свиданий',
+  defaultPhotoPlaceholder: 'кликни на свиданку и тут появится фотка',
+  polaroidCaption: 'чо такой хочеш)',
   finalTitle: 'хех я рада!',
   finalSub: 'жду не дождусь тебя и провести лето вместеее',
   signature: 'я тебя очень люблю,\nжаным менин',
@@ -1122,7 +1122,7 @@ const CONFIG = {
       note: 'я уже морально готовлюсь ахаха',
       photo: 'https://res.cloudinary.com/dlr5ndlss/image/upload/v1782235438/photo_2026-06-23_22-19-19_kkmepb.jpg',
       caption: 'жесткий вайб',
-      plan: 'пойдём вечером, поборемся и просто побесимся, в основном я.'
+      plan: 'пойдём вечером, поборемся и просто побесимся(в основном я).'
     },
     {
       title: 'синема',
@@ -1132,47 +1132,47 @@ const CONFIG = {
       note: 'еда вроде нужна',
       photo: 'https://res.cloudinary.com/dlr5ndlss/image/upload/v1782235437/photo_2026-06-23_22-19-14_mbbbp4.jpg',
       caption: 'киношный вайб',
-      plan: 'выберем фильм, возьмём вкусняшки, а потом ещё немного погуляем.'
+      plan: 'выберем фильм, покушаем(друг-друга), а потом чуть погуляем.'
     },
     {
       title: 'пикник можт',
       emoji: '🧺',
       when: 'когда будет норм погода',
-      where: 'парк / травка / пледик',
-      note: 'еда, фотки и вайб обязательны',
-      photo: '',
+      where: 'в паркее',
+      note: ' лего дейтт',
+      photo: 'https://res.cloudinary.com/dlr5ndlss/image/upload/v1782401100/photo_2026-06-25_20-24-32_uzw6r1.jpg',
       caption: 'уютный вайб',
-      plan: 'возьмём что-нибудь вкусное, сядем на пледик, будем болтать, кушать и просто кайфовать.'
+      plan: 'будем строить лего, много болтать,и кайфовать.'
     },
     {
       title: 'боулинг',
       emoji: '🎳',
-      when: 'когда захочется шума',
-      where: 'боулинг',
-      note: 'проигравший выполняет желание ахаха',
-      photo: '',
-      caption: 'соревновательный вайб',
-      plan: 'пойдём в боулинг, будем очень серьёзно играть, а потом смеяться с того, как мы оба старались.'
+      when: 'вечерком',
+      where: 'гдето в городе',
+      note: 'можно и на развлеч пойти',
+      photo: 'https://res.cloudinary.com/dlr5ndlss/image/upload/v1782401458/photo_2026-06-25_20-30-42_wxxqwi.jpg',
+      caption: 'чуть повторяемся',
+      plan: 'хочу отыграться а потом буду обижаться с того, как старалась,а у тебя просто изи получается.'
     },
     {
-      title: 'закат гулять',
+      title: 'оушн баскет емао',
       emoji: '🌆',
-      when: 'вечером, ближе к закату',
-      where: 'где красиво',
-      note: 'держаться за ручки желательно',
-      photo: '',
-      caption: 'романтичный вайб',
-      plan: 'просто пойдём гулять под закат, сделаем кучу красивых фоток и будем такими немного киношными.'
+      when: 'если успеем',
+      where: 'в астане',
+      note: 'ну главное сходить',
+      photo: 'https://res.cloudinary.com/dlr5ndlss/image/upload/v1782403333/photo_2026-06-25_21-02-00_ndr7zp.jpg',
+      caption: 'воспоминания',
+      plan: 'просто надо сходить когда либо а то еще с М ходить будеш'
     },
     {
       title: 'картинг можт',
       emoji: '🏎️',
-      when: 'когда захотим адреналин',
-      where: 'картинг',
-      note: 'не обижаться если я выиграю',
-      photo: '',
-      caption: 'быстрый вайб',
-      plan: 'сходим на картинг, погоняем, а потом обсудим кто был самым опасным гонщиком этого вечера.'
+      when: 'когда нибудь',
+      where: 'если найдется ваще',
+      note: 'один раз попробуем',
+      photo: 'https://res.cloudinary.com/dlr5ndlss/image/upload/v1782403410/photo_2026-06-25_21-03-19_a4ms3k.jpg',
+      caption: 'адреналин ',
+      plan: 'я выиграю мухехе.'
     }
   ]
 };
@@ -1898,16 +1898,35 @@ function initQuestion() {
 }
 
 // ---------- date cards ----------
+function updatePolaroidByDate(item) {
+  $('#polaroidCaption').textContent = CONFIG.polaroidCaption;
+
+  const photo = $('#photo');
+  photo.innerHTML = '';
+
+  if (item && item.photo) {
+    const img = new Image();
+    img.src = item.photo;
+    img.alt = '';
+
+    img.onerror = () => {
+      photo.innerHTML = `<span>${CONFIG.defaultPhotoPlaceholder}</span>`;
+    };
+
+    photo.append(img);
+  } else {
+    photo.innerHTML = `<span>${CONFIG.defaultPhotoPlaceholder}</span>`;
+  }
+}
+
 function setGeneralTicket() {
   $('#ticketTag').textContent = 'маленькое напоминание';
   $('#ticketWhen').textContent = 'а вообще свиданий та много канеш';
   $('#ticketWhere').textContent = 'просто главное такие не пропустить дае вот';
   $('#ticketNote').textContent = 'так что выбора у тя всё равно нет';
   $('#ticketPlan').textContent = 'мы должны всё попробовать: теннис, бассейн, борьбу, кино и ещё куча всего потом.';
-  $('#polaroidCaption').textContent = CONFIG.polaroidCaption;
 
-  const photo = $('#photo');
-  photo.innerHTML = `<span>${CONFIG.defaultPhotoPlaceholder}</span>`;
+  updatePolaroidByDate(null);
 }
 
 function selectDate(index) {
@@ -1918,9 +1937,8 @@ function selectDate(index) {
     card.classList.toggle('open', i === index);
   });
 
-  setGeneralTicket();
+  updatePolaroidByDate(item);
 }
-
 
 function initDateChoices() {
   const grid = $('#dateGrid');
